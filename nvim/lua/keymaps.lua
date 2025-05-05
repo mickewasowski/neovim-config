@@ -14,3 +14,12 @@ vim.keymap.set('n', '<leader>wo', function()
   print('Opened with wslview: ' .. filepath)
 end, { desc = 'Open current file with wslview' })
 
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = "*.{png,jpg,jpeg,webp,gif}",
+  callback = function(args)
+    local file_path = vim.fn.fnamemodify(args.file, ":p")
+    vim.fn.jobstart({ "wslview", file_path }, { detach = true })
+  end,
+  group = general,
+  desc = "Open image files with wslview",
+})
