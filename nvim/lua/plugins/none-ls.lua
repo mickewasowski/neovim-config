@@ -5,6 +5,11 @@ return {
   },
   config = function()
     local null_ls = require("null-ls")
+    require("mason").setup()
+    require("mason-null-ls").setup({
+      ensure_installed = { "prettier", "eslint_d" },
+      automatic_installation = true,
+    })
 
     null_ls.setup({
       sources = {

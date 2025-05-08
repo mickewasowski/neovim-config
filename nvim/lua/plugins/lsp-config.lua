@@ -14,6 +14,9 @@ return {
     end
   },
   {
+    "jay-babu/mason-null-ls.nvim",
+  },
+  {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
