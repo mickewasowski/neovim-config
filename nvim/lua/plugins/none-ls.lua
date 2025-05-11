@@ -8,7 +8,7 @@ return {
     local null_ls = require("null-ls")
     require("mason").setup()
     require("mason-null-ls").setup({
-      ensure_installed = { "prettier", "eslint_d" },
+      ensure_installed = { "prettier", "eslint_d", "stylua" },
       automatic_installation = true,
     })
 
