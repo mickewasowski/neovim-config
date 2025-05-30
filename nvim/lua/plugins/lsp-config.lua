@@ -13,6 +13,12 @@ return {
       })
     end
   },
+  -- {
+  --   "jay-babu/mason-null-ls.nvim",
+  --   config = function()
+  --     require("mason-null-ls").setup({})
+  --   end
+  -- },
   {
     "neovim/nvim-lspconfig",
     config = function()
