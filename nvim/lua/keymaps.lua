@@ -31,3 +31,19 @@ map({ "n", "v" }, "<C-A-h>", "<C-w><", { desc = "Decrease Width" })
 map({ "n", "v" }, "<C-A-j>", "<C-w>-", { desc = "Decrease Height" })
 map({ "n", "v" }, "<C-A-k>", "<C-w>+", { desc = "Increase Height" })
 map({ "n", "v" }, "<C-A-l>", "<C-w>>", { desc = "Increase Width" })
+-- Doni
+
+-- LSP Target
+map({ "n", "v" }, "<leader>da", vim.lsp.buf.code_action, { desc = "Code Action" })
+map({ "n", "v" }, "<leader>dr", vim.lsp.buf.rename, { desc = "Rename" })
+map({ "n", "v" }, "<leader>ds", "<cmd>Telescope lsp_references<CR>", { desc = "References" })
+map({ "n", "v" }, "<leader>dd", vim.diagnostic.open_float, { desc = "Diagnostic" })
+map({ "n", "v" }, "<leader>df", "<cmd>Telescope lsp_definitions<CR>", { desc = "Definition" })
+
+-- LSP Global
+map({ "n", "v" }, "<leader>sg", "<cmd>LspInfo<CR>", { desc = "Info" })
+map({ "n", "v" }, "<leader>sr", "<cmd>LspRestart<CR>", { desc = "Restart" })
+map({ "n", "v" }, "<leader>sf", function()
+  vim.lsp.buf.format({ async = true })
+end, { desc = "Format" })
+map({ "n", "v" }, "<leader>sd", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
