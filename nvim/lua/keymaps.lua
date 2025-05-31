@@ -10,12 +10,12 @@ map({ "n", "v" }, "<leader>dd", vim.diagnostic.open_float, { desc = "Diagnostic"
 map({ "n", "v" }, "<leader>df", "<cmd>Telescope lsp_definitions<CR>", { desc = "Definition" })
 
 -- LSP Global
-map({ "n", "v" }, "<leader>sg", "<cmd>LspInfo<CR>", { desc = "Info" })
-map({ "n", "v" }, "<leader>sr", "<cmd>LspRestart<CR>", { desc = "Restart" })
-map({ "n", "v" }, "<leader>sf", function()
+map({ "n", "v" }, "<leader>fg", "<cmd>LspInfo<CR>", { desc = "Info" })
+map({ "n", "v" }, "<leader>fr", "<cmd>LspRestart<CR>", { desc = "Restart" })
+map({ "n", "v" }, "<leader>ff", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format" })
-map({ "n", "v" }, "<leader>sd", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
+map({ "n", "v" }, "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 
 
 -- Telescope
