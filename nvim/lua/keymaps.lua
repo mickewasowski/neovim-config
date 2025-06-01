@@ -1,6 +1,5 @@
 local map = vim.keymap.set
 
-vim.g.mapleader = " "
 
 -- LSP Target
 map({ "n", "v" }, "<leader>da", vim.lsp.buf.code_action, { desc = "Code Action" })
