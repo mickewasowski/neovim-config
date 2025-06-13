@@ -37,3 +37,20 @@ map({ "n", "v" }, "<leader>x", function()
   vim.wo.wrap = not wrap_status
   vim.wo.cursorline = not wrap_status
 end, { desc = "Toggle Wrap and Cursorline" })
+
+-- Obsidian
+map({ "n", "v" }, "<leader>oo", "<cmd>ObsidianOpen<cr>", { desc = "Open" })
+map({ "n", "v" }, "<leader>oh", "<cmd>ObsidianCheck<cr>", { desc = "Health" })
+
+map({ "n", "v" }, "<leader>on", "<cmd>ObsidianNew<cr>", { desc = "New" })
+map({ "n", "v" }, "<leader>or", "<cmd>ObsidianRename<cr>", { desc = "Rename" })
+map({ "n", "v" }, "<leader>ot", "<cmd>ObsidianTemplate<cr>", { desc = "Template" })
+
+map({ "n", "v" }, "<leader>oe", "<cmd>ObsidianQuickSwitch<cr>", { desc = "Files" })
+map({ "n", "v" }, "<leader>ow", "<cmd>ObsidianSearch<cr>", { desc = "Search" })
+
+map({ "n", "v" }, "<leader>ol", "<cmd>ObsidianLinks<cr>", { desc = "Links" })
+map({ "n", "v" }, "<leader>ob", "<cmd>ObsidianBacklinks<cr>", { desc = "Backlinks" })
+
+map({ "n", "v" }, "<leader>op", "<cmd>ObsidianPasteImg<cr>", { desc = "Paste Image" })
+
